@@ -3,128 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Portfolio</title>
+<title>Project PS — Portfolio</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  :root{--bg:#0a0a0f;--card:#14141f;--card-hover:#1a1a2e;--accent:#6c63ff;--accent2:#a78bfa;--text:#e2e2ef;--muted:#8888a0;--border:#22223a}
-  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;min-height:100vh;line-height:1.6}
-  .header{text-align:center;padding:4rem 2rem 2rem;position:relative}
-  .header::after{content:'';display:block;width:60px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin:1.5rem auto 0;border-radius:2px}
-  h1{font-size:2.2rem;font-weight:300;letter-spacing:.08em;background:linear-gradient(135deg,var(--text),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .subtitle{color:var(--muted);font-size:.95rem;margin-top:.75rem;letter-spacing:.04em}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;max-width:1200px;margin:2rem auto;padding:0 2rem 4rem}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:all .3s ease;position:relative;overflow:hidden;display:flex;flex-direction:column}
-  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);opacity:0;transition:opacity .3s}
-  .card:hover{transform:translateY(-4px);border-color:var(--accent);background:var(--card-hover)}
-  .card:hover::before{opacity:1}
-  .card-icon{font-size:1.6rem;margin-bottom:.75rem}
-  .card h2{font-size:1.15rem;font-weight:500;margin-bottom:.5rem;letter-spacing:.02em}
-  .card p{color:var(--muted);font-size:.88rem;flex:1;margin-bottom:1.25rem}
-  .card-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--accent2);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.03em;transition:color .2s}
-  .card-link:hover{color:var(--accent)}
-  .card-link svg{width:14px;height:14px;transition:transform .2s}
-  .card-link:hover svg{transform:translateX(3px)}
-  .tag{display:inline-block;background:rgba(108,99,255,.12);color:var(--accent2);font-size:.7rem;padding:.2rem .6rem;border-radius:20px;letter-spacing:.04em;margin-bottom:.75rem}
-  .footer{text-align:center;padding:2rem;color:var(--muted);font-size:.78rem;border-top:1px solid var(--border);letter-spacing:.03em}
-  @media(max-width:700px){.grid{grid-template-columns:1fr;padding:0 1rem 3rem}h1{font-size:1.7rem}.header{padding:3rem 1.5rem 1.5rem}}
+  body{background:#0a0a0f;color:#e0e0e8;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;min-height:100vh;padding:2rem}
+  header{text-align:center;padding:3rem 1rem 2rem}
+  header h1{font-size:2.4rem;font-weight:300;letter-spacing:.15em;color:#fff;text-transform:uppercase}
+  header p{color:#888;font-size:1rem;margin-top:.5rem;letter-spacing:.05em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto;padding:0 1rem 4rem}
+  .card{background:linear-gradient(145deg,#14141f,#1a1a2e);border:1px solid #222;border-radius:14px;padding:1.8rem;transition:transform .25s,box-shadow .25s,border-color .3s;cursor:default}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(100,80,255,.08);border-color:#444}
+  .card h2{font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:.5rem}
+  .card p{font-size:.88rem;color:#999;line-height:1.55;margin-bottom:1.2rem}
+  .card a{display:inline-block;font-size:.82rem;color:#7b68ee;text-decoration:none;font-weight:500;letter-spacing:.03em;transition:color .2s}
+  .card a:hover{color:#a594ff}
+  .tag{display:inline-block;font-size:.7rem;background:#1e1e35;color:#7b68ee;padding:.2rem .6rem;border-radius:20px;margin-bottom:.8rem;letter-spacing:.04em}
+  footer{text-align:center;padding:2rem;color:#444;font-size:.75rem;letter-spacing:.05em}
+  @media(max-width:700px){header h1{font-size:1.6rem}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>Project Portfolio</h1>
-  <p class="subtitle">A curated collection of interactive web experiences</p>
-</div>
+<header>
+  <h1>Project PS</h1>
+  <p>Curated digital experiences</p>
+</header>
 <div class="grid">
 
   <div class="card">
-    <div class="card-icon">🔍</div>
-    <span class="tag">Media &amp; Business</span>
-    <h2>AcquisitionRadar</h2>
-    <p>Visual timeline of landmark media, data &amp; technology acquisitions across decades.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-acquisitionradar/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <span class="tag">Sports Media</span>
+    <h2>PressBox</h2>
+    <p>ESPN editorial tracker, trending content, broadcast schedule &amp; sports media analytics</p>
+    <a href="https://clawdiard.github.io/ps-pressbox/">View Project →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon">🌊</div>
+    <span class="tag">Culture</span>
+    <h2>NYC Culture Map</h2>
+    <p>Interactive guide to New York's major cultural institutions, board connections &amp; upcoming events</p>
+    <a href="https://clawdiard.github.io/ps-nycculturemap/">View Project →</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">Media History</span>
+    <h2>AcquisitionRadar</h2>
+    <p>Visual timeline of landmark media, data &amp; technology acquisitions across decades</p>
+    <a href="https://clawdiard.github.io/ps-acquisitionradar/">View Project →</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">Financial Journalism</span>
+    <h2>SmartMoney Retrospective</h2>
+    <p>Interactive tribute to 20 years of pioneering financial journalism (1992–2012)</p>
+    <a href="https://clawdiard.github.io/ps-smartmoney/">View Project →</a>
+  </div>
+
+  <div class="card">
+    <span class="tag">Performing Arts</span>
+    <h2>CurtainCall</h2>
+    <p>Lincoln Center performance tracker — tonight's shows, recommendations, calendar, venue guide</p>
+    <a href="https://clawdiard.github.io/ps-curtaincall/">View Project →</a>
+  </div>
+
+  <div class="card">
     <span class="tag">Lifestyle</span>
     <h2>GulfWatch</h2>
-    <p>Longboat Key &amp; Sarasota lifestyle dashboard — tides, weather, golf, red tide, events, and dining all in one place.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-gulfwatch/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <p>Longboat Key &amp; Sarasota lifestyle dashboard: tides, weather, golf, red tide, events, dining</p>
+    <a href="https://clawdiard.github.io/ps-gulfwatch/">View Project →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon">💰</div>
-    <span class="tag">Finance &amp; Media</span>
-    <h2>SmartMoney Retrospective</h2>
-    <p>Interactive tribute to 20 years of pioneering financial journalism (1992–2012).</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-smartmoney/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">🤖</div>
     <span class="tag">AI &amp; Publishing</span>
     <h2>AI Traffic Impact</h2>
-    <p>How AI search is reshaping publisher web traffic — data-driven visual exploration.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-aitrafficimpact/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <p>How AI search is reshaping publisher web traffic — data visualizations &amp; analysis</p>
+    <a href="https://clawdiard.github.io/ps-aitrafficimpact/">View Project →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon">📰</div>
-    <span class="tag">Media History</span>
+    <span class="tag">Publishing History</span>
     <h2>Magazine Rack</h2>
-    <p>137 years of American publishing — visual timeline of magazine launches, acquisitions &amp; milestones.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-magazinerack/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <p>137 years of American publishing — visual timeline of magazine launches, acquisitions &amp; milestones</p>
+    <a href="https://clawdiard.github.io/ps-magazinerack/">View Project →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon">📜</div>
     <span class="tag">Media History</span>
     <h2>The Timeline</h2>
-    <p>137 years of media empire history — an interactive visual chronicle of key moments.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-hearsttimeline/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <p>137 years of media empire history — interactive visual chronicle</p>
+    <a href="https://clawdiard.github.io/ps-hearsttimeline/">View Project →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon">📉</div>
     <span class="tag">Finance</span>
     <h2>CrashCourse 87</h2>
-    <p>Interactive tick-by-tick storytelling of Black Monday, October 19, 1987.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-crashcourse87/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <p>Interactive tick-by-tick storytelling of Black Monday, October 19, 1987</p>
+    <a href="https://clawdiard.github.io/ps-crashcourse87/">View Project →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon">🌅</div>
-    <span class="tag">Lifestyle</span>
+    <span class="tag">Coastal Living</span>
     <h2>Tide Table</h2>
-    <p>Elegant tide, sunset &amp; weather dashboard for Longboat Key — print-newspaper aesthetic.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-tidetable/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <p>Elegant tide, sunset &amp; weather dashboard for Longboat Key, FL — print-newspaper aesthetic</p>
+    <a href="https://clawdiard.github.io/ps-tidetable/">View Project →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon">🎭</div>
-    <span class="tag">Arts &amp; Culture</span>
-    <h2>CurtainCall</h2>
-    <p>Lincoln Center performance tracker — tonight's shows, recommendations, calendar, and venue guide.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-curtaincall/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">🏛️</div>
-    <span class="tag">Arts &amp; Culture</span>
-    <h2>NYC Culture Map</h2>
-    <p>Interactive guide to New York's major cultural institutions, board connections &amp; upcoming events.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-nycculturemap/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">🌍</div>
-    <span class="tag">Finance &amp; Data</span>
+    <span class="tag">Global Finance</span>
     <h2>Sovereign Pulse</h2>
-    <p>Interactive Fitch sovereign credit ratings world map — explore global credit landscapes.</p>
-    <a class="card-link" href="https://clawdiard.github.io/ps-sovereign-pulse/" target="_blank">Visit Site <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
+    <p>Interactive Fitch sovereign credit ratings world map</p>
+    <a href="https://clawdiard.github.io/ps-sovereign-pulse/">View Project →</a>
   </div>
 
 </div>
-<div class="footer">11 projects &middot; Updated February 2026</div>
+<footer>Project PS — 12 Experiences</footer>
 </body>
 </html>
