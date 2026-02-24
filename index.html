@@ -6,157 +6,182 @@
 <title>Project Portfolio</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#14141f;--border:#1e1e2e;--text:#e0e0e8;--muted:#8888a0;--accent:#6c63ff;--accent2:#4fc3f7;--hover:#1a1a2a}
-body{background:var(--bg);color:var(--text);font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;padding:0}
-header{text-align:center;padding:4rem 2rem 2rem;position:relative}
-header::after{content:'';display:block;width:80px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin:1.5rem auto 0;border-radius:1px}
-h1{font-size:2.2rem;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;background:linear-gradient(135deg,var(--text),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.count{color:var(--muted);font-size:0.85rem;margin-top:0.75rem;letter-spacing:0.1em}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;padding:2rem 3rem 4rem;max-width:1400px;margin:0 auto}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-decoration:none;color:var(--text);transition:all .25s ease;display:flex;flex-direction:column;gap:0.6rem;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .25s}
-.card:hover{transform:translateY(-3px);border-color:#2a2a3f;box-shadow:0 8px 32px rgba(108,99,255,.08)}
-.card:hover::before{opacity:1}
-.card h2{font-size:1.05rem;font-weight:500;letter-spacing:0.02em}
-.card p{font-size:0.85rem;color:var(--muted);line-height:1.55;flex:1}
-.tag{font-size:0.7rem;color:var(--accent2);letter-spacing:0.08em;text-transform:uppercase;opacity:0.7}
-footer{text-align:center;padding:2rem;color:var(--muted);font-size:0.75rem;letter-spacing:0.05em;border-top:1px solid var(--border)}
-@media(max-width:768px){.grid{padding:1.5rem;grid-template-columns:1fr}h1{font-size:1.6rem}}
-@media(min-width:768px) and (max-width:1024px){.grid{grid-template-columns:repeat(2,1fr);padding:2rem}}
+:root{--bg:#0a0a0f;--card:#13131a;--card-hover:#1a1a24;--border:#1e1e2e;--text:#e0e0e8;--muted:#8888a0;--accent:#6c63ff;--accent2:#a78bfa}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+header{text-align:center;padding:3.5rem 1.5rem 2rem;background:linear-gradient(180deg,#12121a 0%,var(--bg) 100%)}
+header h1{font-size:2.2rem;font-weight:700;letter-spacing:-.02em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header p{color:var(--muted);margin-top:.5rem;font-size:1rem}
+.count{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:2rem;padding:.25rem .9rem;font-size:.85rem;color:var(--accent2);margin-top:.75rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;padding:1rem 2rem 3rem;max-width:1400px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;transition:transform .2s,border-color .3s,box-shadow .3s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 30px rgba(108,99,255,.12)}
+.card h2{font-size:1.1rem;font-weight:600;margin-bottom:.5rem;color:#fff}
+.card .desc{font-size:.88rem;color:var(--muted);line-height:1.5;flex:1}
+.card .meta{margin-top:1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted)}
+.card .visit{color:var(--accent2);font-weight:500;transition:color .2s}
+.card:hover .visit{color:#c4b5fd}
+@media(max-width:700px){.grid{padding:1rem;gap:1rem;grid-template-columns:1fr}header{padding:2.5rem 1rem 1.5rem}header h1{font-size:1.7rem}}
+@media(min-width:768px) and (max-width:1024px){.grid{grid-template-columns:repeat(2,1fr);padding:1rem 1.5rem 2.5rem}}
 </style>
 </head>
 <body>
 <header>
 <h1>Project Portfolio</h1>
-<p class="count">25 Projects</p>
+<p>Curated collection of interactive dashboards, trackers & tools</p>
+<span class="count">25 projects</span>
 </header>
 <div class="grid">
-<a class="card" href="https://clawdiard.github.io/ps-curtaincall/" target="_blank">
-<span class="tag">Performing Arts</span>
-<h2>CurtainCall</h2>
-<p>Lincoln Center performance tracker — tonight's shows, recommendations, calendar, venue guide</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-curtaincall/" target="_blank" rel="noopener">
+<h2>🎭 CurtainCall</h2>
+<div class="desc">Lincoln Center performance tracker — tonight's shows, recommendations, calendar, venue guide</div>
+<div class="meta"><span>ps-curtaincall</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-hearsttimeline/" target="_blank">
-<span class="tag">History</span>
-<h2>The Timeline</h2>
-<p>137 years of media empire history, interactive visual chronicle</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-hearsttimeline/" target="_blank" rel="noopener">
+<h2>📜 The Timeline</h2>
+<div class="desc">137 years of media empire history, interactive visual chronicle</div>
+<div class="meta"><span>ps-hearsttimeline</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-gamepredictor/" target="_blank">
-<span class="tag">Sports Analytics</span>
-<h2>The Game Predictor</h2>
-<p>Harvard vs Yale historical prediction model, countdown & 150-year rivalry analysis</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-gamepredictor/" target="_blank" rel="noopener">
+<h2>🏈 The Game Predictor</h2>
+<div class="desc">Harvard vs Yale historical prediction model, countdown & 150-year rivalry analysis</div>
+<div class="meta"><span>ps-gamepredictor</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-lincolncenterboard/" target="_blank">
-<span class="tag">Board Governance</span>
-<h2>Lincoln Center Board Room</h2>
-<p>Board preparation dashboard: meetings, financials, capital projects, resident companies & key dates</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-lincolncenterboard/" target="_blank" rel="noopener">
+<h2>🏛️ Lincoln Center Board Room</h2>
+<div class="desc">Board preparation dashboard: meetings, financials, capital projects, resident companies & key dates</div>
+<div class="meta"><span>ps-lincolncenterboard</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-fairwayforecast/" target="_blank">
-<span class="tag">Golf & Weather</span>
-<h2>FairwayForecast</h2>
-<p>Golf-specific weather, course conditions & tee time planning for Longboat Key and Sarasota</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-fairwayforecast/" target="_blank" rel="noopener">
+<h2>⛳ FairwayForecast</h2>
+<div class="desc">Golf-specific weather, course conditions & tee time planning for Longboat Key and Sarasota</div>
+<div class="meta"><span>ps-fairwayforecast</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-crashcourse87/" target="_blank">
-<span class="tag">Financial History</span>
-<h2>CrashCourse 87</h2>
-<p>Interactive tick-by-tick storytelling of Black Monday, October 19, 1987</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-crashcourse87/" target="_blank" rel="noopener">
+<h2>📉 CrashCourse 87</h2>
+<div class="desc">Interactive tick-by-tick storytelling of Black Monday, October 19, 1987</div>
+<div class="meta"><span>ps-crashcourse87</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-bat-spotlight/" target="_blank">
-<span class="tag">Collector Cars</span>
-<h2>BaT Spotlight</h2>
-<p>Curated weekly highlights from the collector car auction world</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-bat-spotlight/" target="_blank" rel="noopener">
+<h2>🏎️ BaT Spotlight</h2>
+<div class="desc">Curated weekly highlights from the collector car auction world</div>
+<div class="meta"><span>ps-bat-spotlight</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-pageoneclub/" target="_blank">
-<span class="tag">Journalism</span>
-<h2>PageOneClub</h2>
-<p>Curated Pulitzer Prize journalism, investigative reporting milestones & global press freedom monitor</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-pageoneclub/" target="_blank" rel="noopener">
+<h2>📰 PageOneClub</h2>
+<div class="desc">Curated Pulitzer Prize journalism, investigative reporting milestones & global press freedom monitor</div>
+<div class="meta"><span>ps-pageoneclub</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-gameday/" target="_blank">
-<span class="tag">Sports Rivalry</span>
-<h2>GameDay</h2>
-<p>Harvard vs Yale: 150 years of rivalry history, every score, famous moments & streak analysis</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-gameday/" target="_blank" rel="noopener">
+<h2>🏟️ GameDay</h2>
+<div class="desc">Harvard vs Yale: 150 years of rivalry history, every score, famous moments & streak analysis</div>
+<div class="meta"><span>ps-gameday</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-labwatch/" target="_blank">
-<span class="tag">Venture Capital</span>
-<h2>LabWatch</h2>
-<p>Venture portfolio tracker: HearstLab, Level Up Ventures & strategic investments</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-labwatch/" target="_blank" rel="noopener">
+<h2>🔬 LabWatch</h2>
+<div class="desc">Venture portfolio tracker: HearstLab, Level Up Ventures & strategic investments</div>
+<div class="meta"><span>ps-labwatch</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-nypdashboard/" target="_blank">
-<span class="tag">Healthcare</span>
-<h2>NYP Dashboard</h2>
-<p>NewYork-Presbyterian Hospital performance overview: rankings, financials, quality metrics & campus network</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-nypdashboard/" target="_blank" rel="noopener">
+<h2>🏥 NYP Dashboard</h2>
+<div class="desc">NewYork-Presbyterian Hospital performance overview: rankings, financials, quality metrics & campus network</div>
+<div class="meta"><span>ps-nypdashboard</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-datamoat/" target="_blank">
-<span class="tag">Data & Strategy</span>
-<h2>DataMoat</h2>
-<p>Visual comparison: B2B data companies vs traditional media over 20 years. Market caps, margins, moat analysis & strategic insights.</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-datamoat/" target="_blank" rel="noopener">
+<h2>🏰 DataMoat</h2>
+<div class="desc">Visual comparison: B2B data companies vs traditional media over 20 years — market caps, margins, moat analysis</div>
+<div class="meta"><span>ps-datamoat</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-healthdataatlas/" target="_blank">
-<span class="tag">Healthcare Data</span>
-<h2>HealthData Atlas</h2>
-<p>Interactive map of US healthcare data infrastructure: 20 companies, 7 sectors, 6100+ hospitals</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-healthdataatlas/" target="_blank" rel="noopener">
+<h2>🗺️ HealthData Atlas</h2>
+<div class="desc">Interactive map of US healthcare data infrastructure: 20 companies, 7 sectors, 6100+ hospitals</div>
+<div class="meta"><span>ps-healthdataatlas</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-pressfreedomtracker/" target="_blank">
-<span class="tag">Press Freedom</span>
-<h2>Press Freedom Tracker</h2>
-<p>Global dashboard: journalist detentions, outlet shutdowns, censorship incidents & press freedom index</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-pressfreedomtracker/" target="_blank" rel="noopener">
+<h2>🕊️ Press Freedom Tracker</h2>
+<div class="desc">Global dashboard: journalist detentions, outlet shutdowns, censorship incidents & press freedom index</div>
+<div class="meta"><span>ps-pressfreedomtracker</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-stationgroup/" target="_blank">
-<span class="tag">Television</span>
-<h2>StationGroup</h2>
-<p>Television station portfolio dashboard: 33 stations, 26 markets, interactive map & sortable analytics</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-stationgroup/" target="_blank" rel="noopener">
+<h2>📡 StationGroup</h2>
+<div class="desc">Television station portfolio dashboard: 33 stations, 26 markets, interactive map & sortable analytics</div>
+<div class="meta"><span>ps-stationgroup</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-contrarian-index/" target="_blank">
-<span class="tag">Newspaper Industry</span>
-<h2>The Contrarian Index</h2>
-<p>US newspaper industry dashboard tracking acquisitions, circulation trends & digital subscription growth</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-contrarian-index/" target="_blank" rel="noopener">
+<h2>📊 The Contrarian Index</h2>
+<div class="desc">US newspaper industry dashboard tracking acquisitions, circulation trends & digital subscription growth</div>
+<div class="meta"><span>ps-contrarian-index</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-pressbox/" target="_blank">
-<span class="tag">Sports Media</span>
-<h2>PressBox</h2>
-<p>ESPN editorial tracker, trending content, broadcast schedule & sports media analytics</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-pressbox/" target="_blank" rel="noopener">
+<h2>🏀 PressBox</h2>
+<div class="desc">ESPN editorial tracker, trending content, broadcast schedule & sports media analytics</div>
+<div class="meta"><span>ps-pressbox</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-nycculturemap/" target="_blank">
-<span class="tag">Culture</span>
-<h2>NYC Culture Map</h2>
-<p>Interactive guide to New York's major cultural institutions, board connections & upcoming events</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-nycculturemap/" target="_blank" rel="noopener">
+<h2>🎨 NYC Culture Map</h2>
+<div class="desc">Interactive guide to New York's major cultural institutions, board connections & upcoming events</div>
+<div class="meta"><span>ps-nycculturemap</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-acquisitionradar/" target="_blank">
-<span class="tag">M&A History</span>
-<h2>AcquisitionRadar</h2>
-<p>Visual timeline of landmark media, data & technology acquisitions across decades</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-acquisitionradar/" target="_blank" rel="noopener">
+<h2>📡 AcquisitionRadar</h2>
+<div class="desc">Visual timeline of landmark media, data & technology acquisitions across decades</div>
+<div class="meta"><span>ps-acquisitionradar</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-smartmoney/" target="_blank">
-<span class="tag">Financial Media</span>
-<h2>SmartMoney Retrospective</h2>
-<p>Interactive tribute to 20 years of pioneering financial journalism (1992–2012)</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-smartmoney/" target="_blank" rel="noopener">
+<h2>💰 SmartMoney Retrospective</h2>
+<div class="desc">Interactive tribute to 20 years of pioneering financial journalism (1992–2012)</div>
+<div class="meta"><span>ps-smartmoney</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-gulfwatch/" target="_blank">
-<span class="tag">Lifestyle</span>
-<h2>GulfWatch</h2>
-<p>Longboat Key & Sarasota lifestyle dashboard: tides, weather, golf, red tide, events, dining</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-gulfwatch/" target="_blank" rel="noopener">
+<h2>🌊 GulfWatch</h2>
+<div class="desc">Longboat Key & Sarasota lifestyle dashboard: tides, weather, golf, red tide, events, dining</div>
+<div class="meta"><span>ps-gulfwatch</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-aitrafficimpact/" target="_blank">
-<span class="tag">AI & Publishing</span>
-<h2>AI Traffic Impact</h2>
-<p>How AI search is reshaping publisher web traffic</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-aitrafficimpact/" target="_blank" rel="noopener">
+<h2>🤖 AI Traffic Impact</h2>
+<div class="desc">How AI search is reshaping publisher web traffic</div>
+<div class="meta"><span>ps-aitrafficimpact</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-magazinerack/" target="_blank">
-<span class="tag">Publishing History</span>
-<h2>MagazineRack</h2>
-<p>137 years of American publishing — visual timeline of magazine launches, acquisitions & milestones</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-magazinerack/" target="_blank" rel="noopener">
+<h2>📚 Magazine Rack</h2>
+<div class="desc">137 years of American publishing — visual timeline of magazine launches, acquisitions & milestones</div>
+<div class="meta"><span>ps-magazinerack</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-tidetable/" target="_blank">
-<span class="tag">Coastal Living</span>
-<h2>TideTable</h2>
-<p>Elegant tide, sunset & weather dashboard for Longboat Key, FL — print-newspaper aesthetic</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-tidetable/" target="_blank" rel="noopener">
+<h2>🌅 TideTable</h2>
+<div class="desc">Elegant tide, sunset & weather dashboard for Longboat Key, FL — print-newspaper aesthetic</div>
+<div class="meta"><span>ps-tidetable</span><span class="visit">Visit →</span></div>
 </a>
-<a class="card" href="https://clawdiard.github.io/ps-sovereign-pulse/" target="_blank">
-<span class="tag">Credit Ratings</span>
-<h2>Sovereign Pulse</h2>
-<p>Interactive Fitch sovereign credit ratings world map</p>
+
+<a class="card" href="https://clawdiard.github.io/ps-sovereign-pulse/" target="_blank" rel="noopener">
+<h2>🌍 Sovereign Pulse</h2>
+<div class="desc">Interactive Fitch sovereign credit ratings world map</div>
+<div class="meta"><span>ps-sovereign-pulse</span><span class="visit">Visit →</span></div>
 </a>
+
 </div>
-<footer>Project Portfolio &middot; Updated February 2026</footer>
 </body>
 </html>
